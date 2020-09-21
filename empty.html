@@ -1,0 +1,289 @@
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Searchly BETA</title>
+<meta name="description" content="Searchly - Search anything, on any site. Google, Yahoo, Bing, Twitter, Reddit, Amazon, and more!">
+<style type ="text/css">
+.footer{
+position: fixed;
+text-align: center;
+bottom: 0px;
+width: 100%;
+color: white;
+}
+</style>
+<style type="text/css">
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5
+    }
+
+    30% {
+        background-color: #66bf39
+    }
+
+    60% {
+        background-color: #eb670f
+    }
+
+    90% {
+        background-color: #f35
+    }
+
+    100% {
+        background-color: #864cbf
+    }
+}
+</style>
+<style type="text/css">
+.center-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+ -webkit-animation: bgcolor 20s infinite;
+  animation: bgcolor 10s infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+</style>
+<style type="text/css">
+* {
+  margin: 0px;
+  padding: 0px;
+}
+</style>
+<script>
+function find() {
+var search = document.getElementsByName("search")[0].value;
+var site = document.getElementsByName("site")[0].value;
+
+if(search == "")
+{
+window.location.replace("empty.html");
+}
+else if(site == "Google")
+{
+window.location.replace("https://google.com/search?q="+encodeURIComponent(search));
+}
+else if(site == "Yahoo")
+{
+window.location.replace("https://search.yahoo.com/search?p="+encodeURIComponent(search));
+}
+else if(site == "Bing")
+{
+window.location.replace("https://www.bing.com/search?q="+encodeURIComponent(search));
+}
+else if(site == "[NEW] Ecosia")
+{
+window.location.replace("https://www.ecosia.org/search?q="+encodeURIComponent(search));
+}
+else if(site == "Youtube")
+{
+window.location.replace("https://www.youtube.com/results?search_query="+encodeURIComponent(search));
+}
+else if(site == "Reddit")
+{
+window.location.replace("https://www.reddit.com/search/?q="+encodeURIComponent(search));
+}
+else if(site == "Twitter")
+{
+window.location.replace("https://twitter.com/search?q="+encodeURIComponent(search));
+}
+else if(site == "Facebook")
+{
+window.location.replace("https://www.facebook.com/public/"+encodeURIComponent(search));
+}
+else if(site == "Tumblr")
+{
+window.location.replace("https://www.tumblr.com/search/"+encodeURIComponent(search));
+}
+else if(site == "Wikipedia")
+{
+window.location.replace("https://en.wikipedia.org/wiki/"+encodeURIComponent(search));
+}
+else if(site == "Google Scholar")
+{
+window.location.replace("https://scholar.google.com/scholar?q="+encodeURIComponent(search));
+}
+else if(site == "New York Times")
+{
+window.location.replace("https://www.nytimes.com/search?query="+encodeURIComponent(search));
+}
+else if(site == "Dictionary.com")
+{
+window.location.replace("https://www.dictionary.com/browse/"+encodeURIComponent(search));
+}
+else if(site == "Urban Dictionary")
+{
+window.location.replace("https://www.urbandictionary.com/define.php?term="+encodeURIComponent(search));
+}
+else if(site == "FedEx Tracking")
+{
+window.location.replace("https://www.fedex.com/apps/fedextrack/index.html?tracknumbers="+encodeURIComponent(search));
+}
+else if(site == "USPS Tracking")
+{
+window.location.replace("https://tools.usps.com/go/TrackConfirmAction?tRef=fullpage&tLc=2&text28777=&tLabels="+encodeURIComponent(search));
+}
+else if(site == "DHL Tracking")
+{
+window.location.replace("https://www.dhl.com/en/express/tracking.html?AWB="+encodeURIComponent(search));
+}
+else if(site == "UPS Tracking")
+{
+window.location.replace("https://wwwapps.ups.com/WebTracking/track?track=yes&trackNums="+encodeURIComponent(search));
+}
+else if(site == "Amazon")
+{
+window.location.replace("https://www.amazon.com/s?k="+encodeURIComponent(search));
+}
+else if(site == "Ebay")
+{
+window.location.replace("https://www.ebay.com/sch/"+encodeURIComponent(search));
+}
+else if(site == "Walmart")
+{
+window.location.replace("https://www.walmart.com/search/?query="+encodeURIComponent(search));
+}
+else if(site == "Best Buy")
+{
+window.location.replace("https://www.bestbuy.com/site/searchpage.jsp?st="+encodeURIComponent(search));
+}
+else if(site == "Office Depot")
+{
+window.location.replace("https://www.officedepot.com/catalog/search.do?Ntt="+encodeURIComponent(search));
+}
+else if(site == "Target")
+{
+window.location.replace("https://www.target.com/s?searchTerm="+encodeURIComponent(search));
+}
+else if(site == "Costco")
+{
+window.location.replace("https://www.costco.com/CatalogSearch?keyword="+encodeURIComponent(search));
+}
+else if(site == "Sams Club")
+{
+window.location.replace("https://www.samsclub.com/s/"+encodeURIComponent(search));
+}
+else if(site == "Walgreens")
+{
+window.location.replace("https://www.walgreens.com/search/results.jsp?Ntt="+encodeURIComponent(search));
+}
+else if(site == "CVS")
+{
+window.location.replace("https://www.cvs.com/search/?searchTerm="+encodeURIComponent(search));
+}
+else if(site == "Home Depot")
+{
+window.location.replace("https://www.homedepot.com/s/"+encodeURIComponent(search));
+}
+else if(site == "Lowes")
+{
+window.location.replace("https://www.lowes.com/search?searchTerm="+encodeURIComponent(search));
+}
+else if(site == "Menards")
+{
+window.location.replace("https://www.menards.com/main/search.html?search="+encodeURIComponent(search));
+}
+else if(site == "Bed Bath & Beyond")
+{
+window.location.replace("https://www.bedbathandbeyond.com/store/s/"+encodeURIComponent(search));
+}
+else if(site == "Micro Center")
+{
+window.location.replace("https://www.microcenter.com/search/search_results.aspx?Ntt="+encodeURIComponent(search));
+}
+else if(site == "Newegg")
+{
+window.location.replace("https://www.newegg.com/p/pl?d="+encodeURIComponent(search));
+}
+else if(site == "B&H Photo")
+{
+window.location.replace("https://www.bhphotovideo.com/c/search?Ntt="+encodeURIComponent(search));
+}
+else if(site == "AliExpress")
+{
+window.location.replace("https://www.aliexpress.com/wholesale?SearchText="+encodeURIComponent(search));
+}
+else if(site == "Etsy")
+{
+window.location.replace("https://www.etsy.com/search?q="+encodeURIComponent(search));
+}
+else if(site == "Google Play")
+{
+window.location.replace("https://play.google.com/store/search?q="+encodeURIComponent(search));
+}
+else
+{
+window.location.replace("error.html");
+}
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap/css/custom.css">
+</head>
+<body>
+<div class="center-screen">
+<a href="index.html"><img src="logo.png" height="271" width="300"></a>
+<div class="alert alert-warning" role="alert">
+Please enter a search term.
+</div>
+<div class="form-group">
+<form class="form-inline" onsubmit="return false;" method="post">
+<div class="col-md-5">
+<input class="form-control" type="text" name="search"</input>
+</div>
+<div class="col-md-4">
+<select class="form-control" name="site">
+<option name="Google">Google</option>
+<option name="Yahoo">Yahoo</option>
+<option name="Bing">Bing</option>
+<option name="[NEW] Ecosia">[NEW] Ecosia</option>
+<option name="Youtube">Youtube</option>
+<option name="Reddit">Reddit</option>
+<option name="Twitter">Twitter</option>
+<option name="Facebook">Facebook</option>
+<option name="Tumblr">Tumblr</option>
+<option name="Wikipedia">Wikipedia</option>
+<option name="Google Scholar">Google Scholar</option>
+<option name="New York Times">New York Times</option>
+<option name="Dictionary.com">Dictionary.com</option>
+<option name="Urban Dictionary">Urban Dictionary</option>
+<option name="Fedex Tracking">FedEx Tracking</option>
+<option name="USPS Tracking">USPS Tracking</option>
+<option name="DHL Tracking">DHL Tracking</option>
+<option name="UPS Tracking">UPS Tracking</option>
+<option name="Amazon">Amazon</option>
+<option name="Ebay">Ebay</option>
+<option name="Walmart">Walmart</option>
+<option name="Best Buy">Best Buy</option>
+<option name="Office Depot">Office Depot</option>
+<option name="Target">Target</option>
+<option name="Costco">Costco</option>
+<option name="Sams Club">Sams Club</option>
+<option name="Walgreens">Walgreens</option>
+<option name="CVS">CVS</option>
+<option name="Home Depot">Home Depot</option>
+<option name="Lowes">Lowes</option>
+<option name="Menards">Menards</option>
+<option name="Bed Bath & Beyond">Bed Bath & Beyond</option>
+<option name="Micro Center">Micro Center</option>
+<option name="Newegg">Newegg</option>
+<option name="B&H Photo">B&H Photo</option>
+<option name="AliExpress">AliExpress</option>
+<option name="Etsy">Etsy</option>
+<option name="Google Play">Google Play</option>
+</select>
+</div>
+<div class="col-md-2">
+<input class="btn btn-outline-light my-sm-0" type="submit" value="Search" onclick="find()"</input>
+</div>
+</div>
+</form>
+</div>
+<div class="footer">Copyright &copy 2020 Searchly, Bobby D. | <a href="mailto:searchlyapp@gmail.com">Contact</a> | <a href="donate.html">Donate BTC</a></div>
+</body>
+</html>
